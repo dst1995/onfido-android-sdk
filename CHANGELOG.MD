@@ -9,8 +9,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [new-version - MINOR]
 
 ### Added:
+- Internal: Added the language displayed by the SDK as a parameter on the live video upload, for speech analysis purposes
+
+### Changed:
+- Internal: Changed country suggestion to fetch the country code from the SIM country instead of geo IP
+
+## [4.2.0] - 2018-06-25
+
+### Added:
 - Public: Added error state for multiple faces detected during a face capture step
 - Public: Added a storage space monitoring strategy during liveness video recording
+- UI: Added the Onfido logo on the bottom of every bulleted message screen
+- Internal: Added tracking for the unreadable barcode warning
 
 ### Changed:
 - UI: Changed post upload validation errors UI to appear as an overlay bubble instead of a system dialog
@@ -20,6 +30,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 - Public: Fixed bug which caused an unexpected behaviour when pressing back during a preselected document as first flow step
+- Public: Fixed bug causing a crash when an unexpected error body is returned from the API
+- UI: Fixed bug during autocapture causing the information bottom sheet to enter an inconsistent state whenever the app was sent to background after the manual fallback threshold was triggered
 
 ## [4.1.0] - 2018-05-17
 

@@ -48,7 +48,7 @@ In order to start integration, you will need the **API token** and the **mobile 
 
 ### 2. Adding the SDK dependency
 
-Starting on version [INSERT-CORE-RELEASE-VERSION], we now offer a modularised SDK, which means you can integrate it in two different ways:
+Starting on version `4.2.0`, we now offer a modularised SDK, which means you can integrate it in two different ways:
 
 ```gradle
 repositories {
@@ -303,7 +303,9 @@ In case you would like us to add translations for some other locales we don't pr
 
 You could also provide custom translations for locales that we don't currently support, by having an additional XML strings file inside your resources folder for the desired locale (e.g. `res/values-it/onfido_strings.xml` for :it: translation), with the content of our [strings.xml](strings.xml) file, translated for that locale.
 
-**Note**: If the strings translations change it will result in a MINOR version change, therefore you are responsible for testing your translated layout in case you are using this feature. If you want a locale translated you can also get in touch with us at [android-sdk@onfido.com](mailto:android-sdk@onfido.com).
+**Notes**:
+- If the strings translations change it will result in a MINOR version change, therefore you are responsible for testing your translated layout in case you are using this feature. If you want a locale translated you can also get in touch with us at [android-sdk@onfido.com](mailto:android-sdk@onfido.com).
+- When adding custom translations, please make sure you add the whole set of keys we have on [strings.xml](strings.xml). In particular, `onfido_locale`, which identifies the current locale being added, must be included. E.g. when adding a translations file inside `values_ru`, the `onfido_locale` key should have `ru` as its value.
 
 ## Creating checks
 
